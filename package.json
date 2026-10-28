@@ -1,0 +1,22 @@
+{
+  "name": "ecommerce-gateway",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+  "start:catalog": "node catalog-service/server.js",
+  "start:inventory": "node inventory-service/server.js",
+  "start:composite": "node composite-api/server.js",
+  "start:all": "concurrently \"npm:start:catalog\" \"npm:start:inventory\" \"npm:start:composite\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^5.3.0"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.6"
+  }
+}
